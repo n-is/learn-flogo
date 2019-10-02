@@ -61,7 +61,7 @@
                     {
                         "ref": "#log",
                         "input": {
-                            "message": "=$.filtered"
+                            "message": "=$.ovalue"
                         }
                     }
                 ]

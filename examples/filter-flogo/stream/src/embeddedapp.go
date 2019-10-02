@@ -1,4 +1,9 @@
-{
+// Do not change this file, it has been generated using flogo-cli
+// If you change it and rebuild the application your changes might get lost
+package main
+
+// embedded flogo app descriptor file
+const flogoJSON string = `{
     "name": "stream",
     "type": "flogo:app",
     "version": "0.0.1",
@@ -61,7 +66,7 @@
                     {
                         "ref": "#log",
                         "input": {
-                            "message": "=$.filtered"
+                            "message": "=$.ovalue"
                         }
                     }
                 ]
@@ -77,4 +82,8 @@
             "id": "simple_agg"
         }
     ]
+}`
+
+func init () {
+	cfgJson = flogoJSON
 }
