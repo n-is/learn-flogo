@@ -9,7 +9,7 @@ import (
 
 const (
 	ivValue    = "value"
-	ovFiltered = "filtered"
+	ovFiltered = "filtere"
 	ovValue    = "value"
 )
 
@@ -23,7 +23,7 @@ type Input struct {
 }
 
 type Output struct {
-	Filtered bool        `md:"filtered"`
+	Filtered bool        `md:"filtere"`
 	Value    interface{} `md:"value"`
 }
 

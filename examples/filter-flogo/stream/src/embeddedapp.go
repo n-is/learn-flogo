@@ -66,7 +66,7 @@ const flogoJSON string = `{
                     {
                         "ref": "#log",
                         "input": {
-                            "message": "=$.ovalue"
+                            "message": "=$.filtered"
                         }
                     }
                 ]
