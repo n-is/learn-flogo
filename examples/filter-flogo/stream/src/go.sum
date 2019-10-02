@@ -3,6 +3,7 @@ github.com/julienschmidt/httprouter v1.2.0 h1:TDTW5Yz1mjftljbcKqRcrYhd4XeOoI98t+
 github.com/julienschmidt/httprouter v1.2.0/go.mod h1:SYymIcj16QtmaHHD7aYtjjsJG7VTCxuUUipMqKk8s4w=
 github.com/n-is/learn-flogo/stream/activity/filters v0.0.0-20191001111731-867054d1005e h1:MVlDJ9v1UTTtStHbWwUS3HkqVLVLAJ9OC9Y8p6cZpOg=
 github.com/n-is/learn-flogo/stream/activity/filters v0.0.0-20191001111731-867054d1005e/go.mod h1:W/I7zPK+M3jPsPCE8Hizj2wyq62KioZY+Mb7hDguBlo=
+github.com/n-is/learn-flogo/stream/activity/filters v0.0.0-20191002112911-267640dfd1f7/go.mod h1:W/I7zPK+M3jPsPCE8Hizj2wyq62KioZY+Mb7hDguBlo=
 github.com/pkg/errors v0.8.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/project-flogo/contrib/activity/log v0.9.0 h1:Uptmxa+tAi79mtTn4DNwoWIiA21qnSXzBdVMc+AHfNw=
