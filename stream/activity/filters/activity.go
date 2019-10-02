@@ -24,7 +24,7 @@ type Input struct {
 
 type Output struct {
 	Filtered bool        `md:"filtered"`
-	Value    interface{} `md:"value"`
+	Value    interface{} `md:"ovalue"`
 }
 
 func init() {
