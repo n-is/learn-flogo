@@ -81,13 +81,13 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 
 	done = !(proceedOnlyOnEmit && filteredOut)
 	err = ctx.SetOutput(ovFiltered, filteredOut)
-	ctx.SetOutput(ovValue, out)
+	// ctx.SetOutput(ovValue, out)
 
 	if err != nil {
 		return false, err
 	}
 
-	err = ctx.SetOutput(ovValue, in)
+	err = ctx.SetOutput(ovValue, out)
 
 	if err != nil {
 		return false, err
