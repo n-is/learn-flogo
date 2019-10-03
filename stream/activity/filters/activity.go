@@ -10,7 +10,7 @@ import (
 const (
 	ivValue    = "value"
 	ovFiltered = "filtered"
-	ovValue    = "ovalue"
+	ovValue    = "value"
 )
 
 type Settings struct {
@@ -24,7 +24,7 @@ type Input struct {
 
 type Output struct {
 	Filtered bool        `md:"filtered"`
-	Value    interface{} `md:"ovalue"`
+	Value    interface{} `md:"value"`
 }
 
 func init() {
