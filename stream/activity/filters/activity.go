@@ -10,7 +10,7 @@ import (
 const (
 	ivValue    = "value"
 	ovFiltered = "filtered"
-	ovValue    = "ovalue"
+	ovValue    = "value"
 )
 
 type Settings struct {
@@ -24,7 +24,7 @@ type Input struct {
 
 type Output struct {
 	Filtered bool        `md:"filtered"`
-	Value    interface{} `md:"ovalue"`
+	Value    interface{} `md:"value"`
 }
 
 func init() {
@@ -59,6 +59,7 @@ type Filter interface {
 	FilterOut(val interface{}) (bool, interface{})
 }
 
+// Activity ...
 // Activity is an activity that is used to filter a message to the console
 type Activity struct {
 	filter            Filter
@@ -78,11 +79,9 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 
 	in := ctx.GetInput(ivValue)
 	filteredOut, out := filter.FilterOut(in)
-	// filteredOut = filteredOut
 
 	done = !(proceedOnlyOnEmit && filteredOut)
 	err = ctx.SetOutput(ovFiltered, filteredOut)
-	// ctx.SetOutput(ovValue, out)
 
 	if err != nil {
 		return false, err
