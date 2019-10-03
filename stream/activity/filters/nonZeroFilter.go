@@ -24,7 +24,7 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 				vs_len++
 			}
 		}
-		return fOut, vs[0:vs_len]
+		return fOut, t
 	case []float64:
 		var vs []interface{} = make([]interface{}, len(t))
 		vs_len := 0
@@ -35,7 +35,7 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 				vs_len++
 			}
 		}
-		return fOut, vs[0:vs_len]
+		return fOut, t
 	}
 
 	// For Unsupported Types
