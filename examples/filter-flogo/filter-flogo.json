@@ -43,7 +43,7 @@
                     "input": [
                         {
                             "name": "input",
-                            "type": "integer"
+                            "type": "array"
                         }
                     ]
                 },
@@ -61,7 +61,7 @@
                     {
                         "ref": "#log",
                         "input": {
-                            "message": "=$.filtered"
+                            "message": "=$.value"
                         }
                     }
                 ]

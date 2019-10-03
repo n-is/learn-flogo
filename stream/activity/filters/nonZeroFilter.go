@@ -11,25 +11,33 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 	fOut := false
 	switch t := val.(type) {
 	case int:
-		return t != 0, (t + 1)
+		return t != 0, t
 	case float64:
-		return t != 0.0, (t + 0.1)
+		return t != 0.0, t
 	case []int:
-		for i, v := range t {
+		var vs []interface{} = make([]interface{}, len(t))
+		vs_len := 0
+		for _, v := range t {
 			if v != 0 {
+				vs[vs_len] = v
+				vs_len++
+			} else {
 				fOut = true
 			}
-			t[i] = v + 1
 		}
-		return fOut, t
+		return fOut, vs[0:vs_len]
 	case []float64:
-		for i, v := range t {
+		var vs []interface{} = make([]interface{}, len(t))
+		vs_len := 0
+		for _, v := range t {
 			if v != 0.0 {
+				vs[vs_len] = v
+				vs_len++
+			} else {
 				fOut = true
 			}
-			t[i] = v + 1
 		}
-		return fOut, t
+		return fOut, vs[0:vs_len]
 	}
 
 	// For Unsupported Types
