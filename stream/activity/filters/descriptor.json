@@ -30,7 +30,7 @@
             "type": "boolean"
         },
         {
-            "name": "value",
+            "name": "ovalue",
             "type": "any"
         }
     ]
