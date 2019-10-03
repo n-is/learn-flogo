@@ -18,16 +18,16 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 		for i, v := range t {
 			if v != 0 {
 				fOut = true
-				t[i] = v + 1
 			}
+			t[i] = v + 1
 		}
 		return fOut, t
 	case []float64:
 		for i, v := range t {
 			if v != 0.0 {
 				fOut = true
-				t[i] = v + 0.1
 			}
+			t[i] = v + 1
 		}
 		return fOut, t
 	}
