@@ -19,10 +19,9 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 		vs_len := 0
 		for _, v := range t {
 			if v != 0 {
+				fOut = true
 				vs[vs_len] = v
 				vs_len++
-			} else {
-				fOut = true
 			}
 		}
 		return fOut, t
@@ -31,10 +30,9 @@ func IsNonZero(val interface{}) (bool, interface{}) {
 		vs_len := 0
 		for _, v := range t {
 			if v != 0.0 {
+				fOut = true
 				vs[vs_len] = v
 				vs_len++
-			} else {
-				fOut = true
 			}
 		}
 		return fOut, t

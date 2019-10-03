@@ -78,6 +78,7 @@ func (a *Activity) Eval(ctx activity.Context) (done bool, err error) {
 
 	in := ctx.GetInput(ivValue)
 	filteredOut, out := filter.FilterOut(in)
+	filteredOut = !filteredOut
 
 	done = !(proceedOnlyOnEmit && filteredOut)
 	err = ctx.SetOutput(ovFiltered, filteredOut)
