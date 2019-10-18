@@ -77,6 +77,9 @@ func handleStreamInput(input string) map[string]interface{} {
 	response := make(map[string]interface{})
 	response["value"] = in.Value
 
+	msg, _ := coerce.ToString(in.Value)
+	api.EvalActivity(Activities["log"], &log.Input{Message: msg})
+
 	tmp := &aggregate.Input{Value: in.Value}
 	output, err := api.EvalActivity(Activities["agg1"], tmp)
 
