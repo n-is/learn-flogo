@@ -20,14 +20,14 @@ func RestTest() *api.App {
 	app := api.NewApp()
 
 	// REST Trigger to receive HTTP message
-	trg := app.NewTrigger(&restTrig.Trigger{}, &restTrig.Settings{Port: 9090})
+	trg := app.NewTrigger(&restTrig.Trigger{}, &restTrig.Settings{Port: 80})
 	h, _ := trg.NewHandler(&restTrig.HandlerSettings{Method: "POST", Path: "/stream"})
 	h.NewAction(runActivitiesStream)
 
 	// A log Activity for logging
 	logAct, _ := api.NewActivity(&log.Activity{})
 
-	// An Aggregate Activity to aggregate data obtained at 9090 port
+	// Aggregate Activities to aggregate data obtained at 80 port
 	aggStng1 := &aggregate.Settings{Function: "accumulate", WindowType: "tumbling",
 		WindowSize: 3, ProceedOnlyOnEmit: true}
 	// addStng := map[string]string{"type": "int"}
