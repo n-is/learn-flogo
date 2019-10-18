@@ -89,7 +89,7 @@ func handleStreamInput(input string) map[string]interface{} {
 	}
 
 	if output["report"] == true {
-		fmt.Println("[@9090]$ Aggregator1 Output : ", output["result"])
+		fmt.Println("[@9090]$ Accumulator Output : ", output["result"])
 	}
 
 	output, err = api.EvalActivity(Activities["agg2"], tmp)
@@ -99,7 +99,7 @@ func handleStreamInput(input string) map[string]interface{} {
 	}
 
 	if output["report"] == true {
-		fmt.Printf("[@9090]$ Aggregator2 Output : %0.4f\n", output["result"])
+		fmt.Printf("[@9090]$ Average Output : %0.4f\n", output["result"])
 		fmt.Println()
 	}
 
